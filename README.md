@@ -9,6 +9,6 @@ Kirjakauppa Aloitetaan oma harjoitteluprojekti. Tämä harjoitus jatkuu läpi al
 4. Lisää projektisi Githubiin komentoriviltä
 5. Käytä suositeltua Spring Boot projektin rakennetta. 
 
-
+Ensimmäinen julkaisu: https://github.com/aryokkynen/bookstore/archive/0.01-alpha.zip
 
 

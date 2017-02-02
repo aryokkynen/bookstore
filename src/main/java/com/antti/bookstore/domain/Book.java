@@ -1,20 +1,40 @@
 package com.antti.bookstore.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Book {
 
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private long id;
+	
 	private String title;
 	private String author;
 	private String isbn;
 
 	private double price;
 	private int year;
-
+	
+	/*
 	public Book(String title, String author, String isbn, double price, int year) {
 		super();
 		this.title = title;
 		this.author = author;
 		this.isbn = isbn;
 		this.price = price;
+		this.year = year;
+	}
+	*/
+	public Book(String author, String title, String isbn, int year) {
+		super();
+		this.title = title;
+		this.author = author;
+		this.isbn = isbn;
 		this.year = year;
 	}
 

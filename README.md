@@ -3,7 +3,7 @@ SWD4TN023 - Bookstore assigment
 
 Start new training project. This exercise will run trough course and will be updated periodically to Github  
    
-First week 
+First week  
 1. Create project called Bookstore using Spring Initializer (Add web, test dependencies)  
 1. Add new controller named BookController, mapped at /index  
 3. Add new model-class Book, has following attributes: title, author, year, isbn, price  

@@ -42,7 +42,7 @@ public class BookController {
 	public String deleteBook(@PathVariable("id") Long id , Model model){
 		
 		repository.delete(id);
-		return "redirect:booklist";
+		return "redirect:../booklist";
 	}
 	
 }

@@ -4,37 +4,54 @@
 <head>
 <title>Bookstore</title>
 </head>
+<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"
+	th:href="@{css/bootstrap.min.css}" />	
+
 <body>
-<h1>Bookstore</h1>
+	<h1>Bookstore</h1>
 
-<table>
-<tr>
-<th>Author</th>
-<th>Title</th>
-<th>ISBN</th>
-<th colspan='2'>Year</th>
-</tr>
-<tr th:each="book : ${books}">
-	<td th:text="${book.author}">Author</td>
-	<td th:text="${book.title}">Title</td>
-	<td th:text="${book.isbn}">ISBN</td>
-	<td th:text="${book.year}">Year</td>
-	<td><a th:href="@{/delete/{id}(id=${book.id})}">Delete</a></td>
-	
-</tr>
-</table>
+	<table class="table table-striped">
+		<tr>
+			<th>Author</th>
+			<th>Title</th>
+			<th>ISBN</th>
+			<th colspan='2'>Year</th>
+		</tr>
+		<tr th:each="book : ${books}">
+			<td th:text="${book.author}">Author</td>
+			<td th:text="${book.title}">Title</td>
+			<td th:text="${book.isbn}">ISBN</td>
+			<td th:text="${book.year}">Year</td>
+			<td><a th:href="@{/delete/{id}(id=${book.id})}"><button class="btn btn-danger">Delete</button></a></td>
 
-
-
-<p>Add new book</p>
-<form action="#" th:action="@{/save}" th:object="${book}" method="post">
-	<table>
-		<tr><td>Author</td><td><input type="text" th:field="*{author}" /></td></tr>
-		<tr><td>Title</td><td><input type="text" th:field="*{title}" /></td></tr>
-		<tr><td>ISBN</td><td><input type="text" th:field="*{isbn}" /></td></tr>
-		<tr><td>Year</td><td><input type="number" th:field="*{year}" /></td></tr>
-		<tr><td colspan='2'><input type="submit" value="Submit" /></td></tr>
+		</tr>
 	</table>
-</form>
+
+
+
+	<p>Add new book</p>
+	<form action="#" th:action="@{/save}" th:object="${book}" method="post">
+		<table>
+			<tr>
+				<td>Author</td>
+				<td><input type="text" th:field="*{author}" /></td>
+			</tr>
+			<tr>
+				<td>Title</td>
+				<td><input type="text" th:field="*{title}" /></td>
+			</tr>
+			<tr>
+				<td>ISBN</td>
+				<td><input type="text" th:field="*{isbn}" /></td>
+			</tr>
+			<tr>
+				<td>Year</td>
+				<td><input type="number" th:field="*{year}" /></td>
+			</tr>
+			<tr>
+				<td colspan='2'><input class="btn btn-success" type="submit" value="Submit" /></td>
+			</tr>
+		</table>
+	</form>
 </body>
 </html>

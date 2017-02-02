@@ -53,7 +53,7 @@ public class BookstoreApplication {
 			for (Book book : repository.findAll()) {
 				log.info(book.toString());
 			}
-			log.info("");
+			log.info("-------------------------------");
 		};
 
 	}

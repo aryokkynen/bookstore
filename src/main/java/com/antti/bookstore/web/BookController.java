@@ -1,7 +1,5 @@
 package com.antti.bookstore.web;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -25,7 +23,6 @@ public class BookController {
 
 		model.addAttribute("book", new Book());
 		model.addAttribute("books", repository.findAll());
-		System.err.println(model);
 		return "books";
 	}
 
@@ -34,15 +31,14 @@ public class BookController {
 			Model model) {
 
 		repository.save(book);
-
 		return "redirect:booklist";
 	}
 
-	@RequestMapping(value = "/delete/{id}" , method= RequestMethod.GET)
-	public String deleteBook(@PathVariable("id") Long id , Model model){
-		
+	@RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
+	public String deleteBook(@PathVariable("id") Long id, Model model) {
+
 		repository.delete(id);
 		return "redirect:../booklist";
 	}
-	
+
 }

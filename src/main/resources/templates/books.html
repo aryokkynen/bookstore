@@ -8,6 +8,8 @@
 	th:href="@{css/bootstrap.min.css}" />	
 
 <body>
+<div class="container">
+<div class="well">
 	<h1>Bookstore</h1>
 
 	<table class="table table-striped">
@@ -26,10 +28,10 @@
 
 		</tr>
 	</table>
-
-
-
-	<p>Add new book</p>
+</div>
+<hr />
+<div class="well">
+	<h1>Add new book</h1>
 	<form  class="form-control" action="#" th:action="@{/save}" th:object="${book}" method="post">
 		<table>
 			<tr>
@@ -53,5 +55,7 @@
 			</tr>
 		</table>
 	</form>
+</div>
+</div>	
 </body>
 </html>

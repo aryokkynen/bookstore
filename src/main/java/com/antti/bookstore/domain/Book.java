@@ -21,7 +21,7 @@ public class Book {
 	private int year;
 	
 	/*
-	public Book(String title, String author, String isbn, double price, int year) {
+	public Book(String author, String title, String isbn, double price, int year) {
 		super();
 		this.title = title;
 		this.author = author;

@@ -30,23 +30,23 @@
 
 
 	<p>Add new book</p>
-	<form action="#" th:action="@{/save}" th:object="${book}" method="post">
+	<form  class="form-control" action="#" th:action="@{/save}" th:object="${book}" method="post">
 		<table>
 			<tr>
 				<td>Author</td>
-				<td><input type="text" th:field="*{author}" /></td>
+				<td><input class="form-control" type="text" th:field="*{author}" /></td>
 			</tr>
 			<tr>
 				<td>Title</td>
-				<td><input type="text" th:field="*{title}" /></td>
+				<td><input class="form-control" type="text" th:field="*{title}" /></td>
 			</tr>
 			<tr>
 				<td>ISBN</td>
-				<td><input type="text" th:field="*{isbn}" /></td>
+				<td><input class="form-control" type="text" th:field="*{isbn}" /></td>
 			</tr>
 			<tr>
 				<td>Year</td>
-				<td><input type="number" th:field="*{year}" /></td>
+				<td><input class="form-control" type="number" th:field="*{year}" /></td>
 			</tr>
 			<tr>
 				<td colspan='2'><input class="btn btn-success" type="submit" value="Submit" /></td>

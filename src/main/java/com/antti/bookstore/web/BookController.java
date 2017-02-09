@@ -1,5 +1,7 @@
 package com.antti.bookstore.web;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -8,9 +10,11 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.antti.bookstore.domain.Book;
 import com.antti.bookstore.domain.BookRepository;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Controller
 public class BookController {
@@ -41,9 +45,24 @@ public class BookController {
 		return "redirect:../booklist";
 	}
 
+	@JsonIgnore
+	@RequestMapping(value="/books")
+	public @ResponseBody List<Book> booksJSON() {	
+        return (List<Book>) repository.findAll();
+    }
+	
+	@JsonIgnore
+	@RequestMapping(value="/books/{id}")
+	public @ResponseBody Book findBookJson(@PathVariable("id") long id) {	
+        return repository.findOne(id);
+    }
+	
 	// public @ResponseBody dasd(){...} jos ei RESTcontrolleria käytössä.
     @RequestMapping(value="/login")
 	public String login() {
 		return "login";
 	} 
+    
+
+    
 }

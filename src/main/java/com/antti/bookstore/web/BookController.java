@@ -41,4 +41,9 @@ public class BookController {
 		return "redirect:../booklist";
 	}
 
+	// public @ResponseBody dasd(){...} jos ei RESTcontrolleria käytössä.
+    @RequestMapping(value="/login")
+	public String login() {
+		return "login";
+	} 
 }

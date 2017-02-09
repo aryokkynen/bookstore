@@ -31,7 +31,7 @@ Second week
 Second release: https://github.com/aryokkynen/bookstore/archive/0.02-alpha.zip
 ![Current status](/img/week2.png "Current status")
 <hr>
-Third week
+Third week  
 Part 1 - Securing the web application
   
 1. Add Spring Security to your project by adding dependency  

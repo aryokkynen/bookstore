@@ -14,7 +14,7 @@
 	<h1>Bookstore</h1>
 	<div class="well"><span th:inline="text">Welcome:<strong> [[${#httpServletRequest.remoteUser}]]!</strong></span></div>
         <form th:action="@{/logout}" method="post">
-            <input type="submit" value="Sign Out"/>
+            <input class="btn btn-danger" type="submit" value="Logout"/>
         </form>
 	<table class="table table-striped">
 		<tr>

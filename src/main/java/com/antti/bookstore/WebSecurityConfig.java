@@ -20,6 +20,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
             .authorizeRequests()
+            	.antMatchers("/api/books/*", "/api", "/css/*").permitAll() // Permit users to /api and /api/books without logging in
                 .anyRequest().authenticated()
                 .and()
             .formLogin()
@@ -33,7 +34,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-        /* In memory auth no longer in use
+        /* inMemoryAuthentication no longer in use
     	auth
             .inMemoryAuthentication()
                 .withUser("user").password("password").roles("USER");

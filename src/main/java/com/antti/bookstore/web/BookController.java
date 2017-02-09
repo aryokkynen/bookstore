@@ -56,13 +56,10 @@ public class BookController {
 	public @ResponseBody Book findBookJson(@PathVariable("id") long id) {	
         return repository.findOne(id);
     }
-	
-	// public @ResponseBody dasd(){...} jos ei RESTcontrolleria käytössä.
+
     @RequestMapping(value="/login")
 	public String login() {
 		return "login";
 	} 
-    
-
     
 }

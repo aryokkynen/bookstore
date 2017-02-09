@@ -28,7 +28,7 @@
 			<td th:text="${book.title}">Title</td>
 			<td th:text="${book.isbn}">ISBN</td>
 			<td th:text="${book.year}">Year</td>
-			<td sec:authorize="hasRole('ROLE_ADMIN')"><a th:href="@{/delete/{id}(id=${book.id})}"><button class="btn btn-danger">Delete</button></a></td>
+			<td sec:authorize="hasAuthority('ADMIN')"><a th:href="@{/delete/{id}(id=${book.id})}"><button class="btn btn-danger">Delete</button></a></td>
 
 		</tr>
 	</table>

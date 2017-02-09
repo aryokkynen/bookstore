@@ -9,6 +9,8 @@ import org.springframework.context.annotation.Bean;
 
 import com.antti.bookstore.domain.Book;
 import com.antti.bookstore.domain.BookRepository;
+import com.antti.bookstore.domain.User;
+import com.antti.bookstore.domain.UserRepository;
 
 @SpringBootApplication
 public class BookstoreApplication {
@@ -21,10 +23,18 @@ public class BookstoreApplication {
 	}
 
 	@Bean
-	public CommandLineRunner demo(BookRepository repository) {
+	public CommandLineRunner demo(BookRepository repository, UserRepository urepository) {
 		return (args) -> {
 			log.info("Commandline works`?");
+			
+			// Create users: admin/admin user/user
+			User user1 = new User("user", "$2a$06$3jYRJrg0ghaaypjZ/.g4SethoeA51ph3UD4kZi9oPkeMTpjKU5uo6", "USER");
+			User user2 = new User("admin", "$2a$10$0MMwY.IQqpsVc1jC8u7IJ.2rT8b0Cd3b3sfIBGV2zfgnPGtT4r0.C", "ADMIN");
+			urepository.save(user1);
+			urepository.save(user2);
 
+			
+			
 			Book bk = new Book("James S. A Corey", "Leviathan Wakes",
 					"1234567-1", 2011);
 			Book bk2 = new Book("James S. A Corey", "Caliban's War",
@@ -54,6 +64,16 @@ public class BookstoreApplication {
 				log.info(book.toString());
 			}
 			log.info("-------------------------------");
+			
+			log.info("Users found with findAll():");
+			log.info("-------------------------------");
+			for (User user : urepository.findAll()) {
+				log.info(user.toString());
+			}
+			log.info("-------------------------------");
+			
+			
+			
 		};
 
 	}

@@ -29,6 +29,46 @@ Second week
   -Add link to your booklist template file.  
  
 Second release: https://github.com/aryokkynen/bookstore/archive/0.02-alpha.zip
-![Current status](http://myy.haaga-helia.fi/~a1503069/SWD4TN023/week2.png "Current status")
+![Current status](/img/week2.png "Current status")
 <hr>
+Third week
+Part 1 - Securing the web application
   
+1. Add Spring Security to your project by adding dependency  
+2. Add Spring Security configuration class which will secure all URLs (requires authentication in all URLs) and add two in-memory users with roles USER and ADMIN  
+3. Create the login page and add login method to controller  
+4. Add logout functionality to your booklist page  
+5. Show authenticated username in your booklist page  
+6. Restrict Delete book functionality only to users with ADMIN role  
+
+Part 2 - Securing the web application Part II 
+
+1. Create user entity for your application endusers  
+2. Attributes: username (unique), password, email, role  
+3. Create crud repository for user entity  
+4. Implement UserDetailService  
+5. Add some users to your database and hash the passwords with BCrypt hashing algorithm  
+6. Change Spring Security configuration to use user entites instead of in-memory users in authentication   
+
+![Login](/img/week_3_login.png)  
+
+![Bookstore](/img/week_3_bookstore.png)
+
+Part 3 - REST
+
+1. Create REST service that return all books (JSON)  
+1  . Create a method to controller  
+2  . Ignore one-to-many link from JSON  
+2. Create REST service that return one book by id (JSON)  
+1  . Create a method to controller  
+2  . Use path variable to get book id  
+3. Change REST api path to /api  
+1  . Modify your application.properties
+
+![REST Api](/img/week_3_rest_api.png)  
+
+![Books](/img/week_3_rest_books.png)  
+
+![Single book](/img/week_3_rest_single_book.png)  
+Third release: https://github.com/aryokkynen/bookstore/archive/0.03-alpha.zip
+<hr>

@@ -72,3 +72,18 @@ Part 3 - REST
 ![Single book](/img/week_3_rest_single_book.png)  
 Third release: https://github.com/aryokkynen/bookstore/archive/0.03-alpha.zip
 <hr>
+
+Week 6&7  
+  
+React front    
+1. Add react.js to your Spring Boot project  
+2. Print your bookstore database content in table form  
+3. Add delete button which removes book from database  
+4. Add form to create new book & refresh view once book is added  
+5. Add authentication using Spring Security module  
+
+![With React Front](https://github.com/aryokkynen/bookstore/blob/master/img/react_bookstore.png)  
+Fourth release: https://github.com/aryokkynen/bookstore/archive/0.04-alpha.zip
+
+
+

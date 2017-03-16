@@ -6,6 +6,8 @@
     </head>
     <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"
 	th:href="@{css/bootstrap.min.css}" />
+	    <link type="text/css" rel="stylesheet" href="css/main.min.css"
+	th:href="@{css/main.css}" />
     
     <body>
         <div th:if="${param.error}">
@@ -15,7 +17,7 @@
             <font color="green">You have been logged out.</font>
         </div>
         <form class="form-control" th:action="@{/login}" method="post">
-            <div><label> User Name : <input class="form-control" type="text" name="username"/> </label></div>
+            <div><label> User Name: <input class="form-control" type="text" name="username"/> </label></div>
             <div><label> Password: <input class="form-control" type="password" name="password"/> </label></div>
             <div><input class="btn btn-success" type="submit" value="Sign In"/></div>
         </form>

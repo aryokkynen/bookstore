@@ -41,7 +41,7 @@ public class BookstoreApplication {
 					"978-1-841-49990-1", 2012);
 			Book bk3 = new Book("James S. A Corey", "Abaddon's Gate",
 					"978-0-316-12907-7", 2013);
-			Book bk4 = new Book("James S. A Corey", "Cibola Burn", "1234567-4",
+			Book bk4 = new Book("James S. A Corey", "Cibola Burn", "978-0-316-21762-0",
 					2014);
 			Book bk5 = new Book("James S. A Corey", "Nemesis Games",
 					"978-0-316-21762-0", 2015);

@@ -20,8 +20,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
             .authorizeRequests()
-            	//.antMatchers("/api/books/*", "/api*", "/css/*").permitAll() // Permit users to /api and /api/books without logging in
-                .antMatchers("/css/*", "/img*").permitAll()
+            	.antMatchers("/css/*", "/img/*").permitAll()
             	.anyRequest().authenticated()
                 .and()
             .formLogin()
@@ -31,11 +30,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .httpBasic()
     			.and()
-    		.csrf().disable()
+    			.csrf().disable()
     		.logout()
-    		.logoutSuccessUrl("/login")
-    		.invalidateHttpSession(true)
-			.deleteCookies("JSESSIONID");
+    			.logoutSuccessUrl("/login")
+    			.invalidateHttpSession(true)
+    			.deleteCookies("JSESSIONID");
     }
 
     @Autowired

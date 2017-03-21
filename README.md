@@ -11,7 +11,8 @@ First week
 5. Use suggested Spring Boot project hierarchy
 
 First release: https://github.com/aryokkynen/bookstore/archive/0.01-alpha.zip  
-<hr>  
+<hr> 
+
 Second week  
 1. Bookstore: Add JPA and database  
    -Add JPA support and H2 database to your bookstore project (in GitHub) by modifying pom.xml file  
@@ -31,8 +32,9 @@ Second week
 Second release: https://github.com/aryokkynen/bookstore/archive/0.02-alpha.zip
 ![Current status](/img/week2.png "Current status")
 <hr>
+
 Third week  
-Part 1 - Securing the web application
+Part 1 - Securing the web application  
   
 1. Add Spring Security to your project by adding dependency  
 2. Add Spring Security configuration class which will secure all URLs (requires authentication in all URLs) and add two in-memory users with roles USER and ADMIN  
@@ -54,7 +56,9 @@ Part 2 - Securing the web application Part II
 
 ![Bookstore](/img/week_3_bookstore.png)
 
-Part 3 - REST
+<hr>
+
+Part 3 - REST  
 
 1. Create REST service that return all books (JSON)  
 1  . Create a method to controller  
@@ -71,6 +75,7 @@ Part 3 - REST
 
 ![Single book](/img/week_3_rest_single_book.png)  
 Third release: https://github.com/aryokkynen/bookstore/archive/0.03-alpha.zip
+
 <hr>
 
 Week 6&7  
